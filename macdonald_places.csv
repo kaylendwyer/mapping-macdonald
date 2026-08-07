@@ -1,0 +1,235 @@
+location,events,query,lat,lon,geo_precision,country,display_name,note,manual
+"Aberdeen, SCT",13,"Aberdeen, Scotland, UK",57.1482429,-2.0928095,town,UK,"Aberdeen City, Alba / Scotland, United Kingdom",,FALSE
+"Albany, NY",2,"Albany, New York, USA",42.6511674,-73.7549680,town,USA,"City of Albany, Albany County, New York, United States",,FALSE
+"Altoona, PA",1,"Altoona, Pennsylvania, USA",40.5193586,-78.3968299,town,USA,"Altoona, Blair County, Pennsylvania, United States",,FALSE
+"Amesbury, MA",1,"Amesbury, Massachusetts, USA",42.8579536,-70.9300921,town,USA,"Amesbury, Essex County, Massachusetts, 01913, United States",,FALSE
+"Andover, MA",1,"Andover, Massachusetts, USA",42.6571700,-71.1408776,town,USA,"Andover, Essex County, Massachusetts, United States",,FALSE
+"Anerley, London",1,"Anerley, London, England, UK",51.4088267,-0.0611263,town,UK,"Anerley, London Borough of Bromley, Greater London, England, SE20 8TJ, United Kingdom",,FALSE
+"Ann Arbor, MI",2,"Ann Arbor, Michigan, USA",42.2813722,-83.7484616,town,USA,"Ann Arbor, Washtenaw County, Michigan, United States",,FALSE
+"Auburn, NY",1,"Auburn, New York, USA",42.9320202,-76.5672029,town,USA,"City of Auburn, Cayuga County, New York, 13021, United States",,FALSE
+"Baltimore, MD",1,"Baltimore, Maryland, USA",39.2908816,-76.6107590,town,USA,"Baltimore, Maryland, United States",,FALSE
+"Banff, SCT",1,"Banff, Scotland, UK",57.6645459,-2.5217539,town,UK,"Banff, Aberdeenshire, Alba / Scotland, AB45 1AY, United Kingdom",,FALSE
+Barrow,1,"Barrow-in-Furness, England, UK",54.1288796,-3.2269008,town,UK,"Barrow-in-Furness, Newton-in-Furness, Westmorland and Furness, England, United Kingdom",,FALSE
+Bath,3,"Bath, England, UK",51.3813864,-2.3596963,town,UK,"Bath, Bath and North East Somerset, West of England, England, United Kingdom",,FALSE
+Bedford,3,"Bedford, England, UK",52.1363806,-0.4675041,town,UK,"Bedford, England, MK40 1SU, United Kingdom",,FALSE
+"Bedford Park, Chiswick",1,"Bedford Park, London, United Kingdom",51.4982412,-0.2557924,town,UK,"Bedford Park, London Borough of Ealing, Greater London, England, United Kingdom","the garden suburb in Chiswick; OSM holds it as a residential area, not a settlement",FALSE
+Bedwell Park,2,"Essendon, Hertfordshire, England, UK",51.7620735,-0.1629120,town,UK,"Essendon, Welwyn Hatfield, Hertfordshire, England, United Kingdom",Bedwell Park is the estate at Essendon,FALSE
+"Belfast, IRL",5,"Belfast, Ireland",54.5963910,-5.9301829,town,Ireland,"Belfast City District, County Antrim, Northern Ireland / Tuaisceart Éireann, United Kingdom",,FALSE
+"Belgravia, London",1,"Belgravia, London, England, UK",51.4982128,-0.1534998,town,UK,"Belgravia, City of Westminster, Greater London, England, SW1X 8QA, United Kingdom",,FALSE
+Ben Rhydding,1,"Ben Rhydding, Ilkley, England, UK",53.9236684,-1.7977037,town,UK,"Ben Rhydding, Ilkley, Bradford, West Yorkshire, England, LS29 8PP, United Kingdom","sources also have ""Ben Rydding""",FALSE
+Birmingham,14,"Birmingham, England, UK",52.4948994,-1.8518439,town,UK,"Birmingham, West Midlands, England, United Kingdom",,FALSE
+"Bishop Auckland, SCT",1,"Bishop Auckland, County Durham, England, UK",54.6640762,-1.6752864,town,UK,"Bishop Auckland, County Durham, North East, England, United Kingdom","the article marks this SCT, but Bishop Auckland is in County Durham, England",FALSE
+Blackheath,1,"Blackheath, England, UK",51.4662623,0.0086810,town,UK,"Blackheath, London Borough of Lewisham, Greater London, England, SE3 0DE, United Kingdom",,FALSE
+"Blackheath, London",1,"Blackheath, London, England, UK",51.4662623,0.0086810,town,UK,"Blackheath, London Borough of Lewisham, Greater London, England, SE3 0DE, United Kingdom",,FALSE
+"Bloomsbury, London",2,"Bloomsbury, London, England, UK",51.5210963,-0.1289635,town,UK,"Bloomsbury, London Borough of Camden, Greater London, England, WC1E 7HU, United Kingdom",,FALSE
+"Bordighera, ITL",9,"Bordighera, Italy",43.7939893,7.6731108,town,Italy,"Bordighera, Provincia di Imperia, Liguria, 18012, Italia",,FALSE
+"Boston, MA",5,"Boston, Massachusetts, USA",42.3588336,-71.0578303,town,USA,"Boston, Suffolk County, Massachusetts, United States",,FALSE
+Bournemouth,14,"Bournemouth, England, UK",50.7446718,-1.8579514,town,UK,"Bournemouth, Bear Cross, Bournemouth, Christchurch and Poole, England, United Kingdom",,FALSE
+"Bow, London",1,"Bow, London, England, UK",51.5309383,-0.0274853,town,UK,"Bow, London Borough of Tower Hamlets, Greater London, England, E3 2DS, United Kingdom",,FALSE
+Bradford,6,"Bradford, England, UK",53.7944229,-1.7519186,town,UK,"Bradford, West Yorkshire, England, BD1 1PH, United Kingdom",,FALSE
+Brampton,1,"Brampton, Cumberland, United Kingdom",54.9422402,-2.7344533,town,UK,"Brampton, Cumberland, England, United Kingdom",follows Carlisle by one day on the 1885 tour,FALSE
+"Brechin, SCT",1,"Brechin, Scotland, UK",56.7315193,-2.6600193,town,UK,"Brechin, Angus, Alba / Scotland, DD9 6ER, United Kingdom",,FALSE
+Brighton,5,"Brighton, England, UK",50.8214626,-0.1400561,town,UK,"Brighton, Brighton and Hove, England, BN1 1HJ, United Kingdom",,FALSE
+Bristol,10,"Bristol, England, UK",51.4430141,-2.5816622,town,UK,"City of Bristol, West of England, England, United Kingdom",,FALSE
+"Brixton, London",1,"Brixton, London, England, UK",51.4633914,-0.1148023,town,UK,"Brixton, London Borough of Lambeth, Greater London, England, SW9 8BH, United Kingdom",,FALSE
+"Brooklyn, NY",1,"Brooklyn, New York, USA",40.6526006,-73.9497211,town,USA,"Brooklyn, Kings County, New York, United States",,FALSE
+"Buffalo, NY",2,"Buffalo, New York, USA",42.8864163,-78.8781493,town,USA,"Buffalo, Erie County, New York, United States",,FALSE
+"Burlington, VT",1,"Burlington, Vermont, USA",44.4761601,-73.2129060,town,USA,"Burlington, Chittenden County, Vermont, United States",,FALSE
+Buxton,1,"Buxton, England, UK",53.2593422,-1.9100768,town,UK,"Buxton, High Peak, Derbyshire, East Midlands, England, United Kingdom",,FALSE
+Cambridge,3,"Cambridge, England, UK",52.1975846,0.1391537,town,UK,"Cambridge, Cambridgeshire, Cambridgeshire and Peterborough, England, United Kingdom",,FALSE
+"Camden, London",1,"Camden, London, England, UK",51.5427966,-0.1624803,town,UK,"London Borough of Camden, Greater London, England, United Kingdom",,FALSE
+"Cannes, France",3,"Cannes, France",43.5515198,7.0134418,town,France,"Cannes, Grasse, Alpes-Maritimes, Provence-Alpes-Côte d'Azur, France métropolitaine, France",,FALSE
+Canonbury,1,"Canonbury, England, UK",51.5423339,-0.0914333,town,UK,"Canonbury, Highbury, London Borough of Islington, Greater London, England, United Kingdom",,FALSE
+Carlisle,1,"Carlisle, England, UK",54.8948478,-2.9362311,town,UK,"Carlisle, Cumberland, England, United Kingdom",,FALSE
+"Charlestown, Boston, MA",1,"Charlestown, Boston, Massachusetts, USA",42.3778749,-71.0619957,town,USA,"Charlestown, Boston, Suffolk County, Massachusetts, 02129, United States",,FALSE
+"Charlton, London",1,"Charlton, London, England, UK",51.4826053,0.0365359,town,UK,"Charlton, Royal Borough of Greenwich, Greater London, England, SE7 8UH, United Kingdom",,FALSE
+Cheltenham,2,"Cheltenham, England, UK",51.8995685,-2.0711559,town,UK,"Cheltenham, Gloucestershire, England, GL52 2RX, United Kingdom",,FALSE
+"Cheshunt, London",1,"Cheshunt, Hertfordshire, England, UK",51.7020520,-0.0335908,town,UK,"Cheshunt, Broxbourne, Hertfordshire, England, EN8 9AA, United Kingdom",the article gives London; Cheshunt is in Hertfordshire,FALSE
+Chester,1,"Chester, England, UK",53.1908873,-2.8908955,town,UK,"Chester, Cheshire West and Chester, England, CH1 2ET, United Kingdom",,FALSE
+Chesterfield,1,"Chesterfield, England, UK",53.2352134,-1.4264097,town,UK,"Chesterfield, Derbyshire, East Midlands, England, United Kingdom",,FALSE
+"Chicago, IL",2,"Chicago, Illinois, USA",41.8755616,-87.6244212,town,USA,"Chicago, South Chicago Township, Cook County, Illinois, United States",,FALSE
+Christchurch,1,"Christchurch, Dorset, England, UK",50.7651081,-1.8145131,town,UK,"Christchurch, Hurn, Bournemouth, Christchurch and Poole, England, United Kingdom",,FALSE
+"Cincinnati, OH",2,"Cincinnati, Ohio, USA",39.1012809,-84.5127405,town,USA,"Cincinnati, Hamilton County, Ohio, United States",,FALSE
+Clapham,2,"Clapham, England, UK",51.4614469,-0.1386270,town,UK,"Clapham, London Borough of Lambeth, Greater London, England, SW4 7AJ, United Kingdom",,FALSE
+"Clapham, London",1,"Clapham, London, England, UK",51.4614469,-0.1386270,town,UK,"Clapham, London Borough of Lambeth, Greater London, England, SW4 7AJ, United Kingdom",,FALSE
+Clifton,1,"Clifton, Bristol, England, UK",51.4615884,-2.6202846,town,UK,"Clifton, Bristol, City of Bristol, West of England, England, BS8 3EZ, United Kingdom",entry #467 names the Victoria Rooms and cites the Western Daily Press,FALSE
+"Clifton, Bristol",1,"Clifton, Bristol, England, UK",51.4615884,-2.6202846,town,UK,"Clifton, Bristol, City of Bristol, West of England, England, BS8 3EZ, United Kingdom","the article gives ""Briston""; #428 was performed at Clifton College, in Bristol",FALSE
+"Coatbridge, SCT",1,"Coatbridge, Scotland, UK",55.8624894,-4.0259894,town,UK,"Coatbridge, North Lanarkshire, Alba / Scotland, ML5 3EH, United Kingdom",,FALSE
+"Columbus, OH",1,"Columbus, Ohio, USA",39.9622601,-83.0007065,town,USA,"Columbus, Sharon, Franklin County, Ohio, United States",,FALSE
+Coventry,1,"Coventry, England, UK",52.4081812,-1.5104770,town,UK,"Coventry, West Midlands, England, CV1 1LL, United Kingdom",,FALSE
+"Crieff, SCT",2,"Crieff, Scotland, UK",56.3727170,-3.8397453,town,UK,"Crieff, Perth and Kinross, Alba / Scotland, PH7 3BS, United Kingdom",,FALSE
+"Croydon, London",6,"Croydon, London, England, UK",51.3713049,-0.1019570,town,UK,"Croydon, Greater London, England, CR0 1SZ, United Kingdom",,FALSE
+"Cullen, SCT",1,"Cullen, Scotland, UK",57.6911126,-2.8195913,town,UK,"Cullen, Moray, Alba / Scotland, AB56 4RR, United Kingdom",,FALSE
+"Cupar, Fife, SCT",2,"Cupar, Fife, Scotland, UK",56.3193913,-3.0116545,town,UK,"Cupar, Fife, Alba / Scotland, KY15 4BP, United Kingdom","the article gives only ""Fife""; #583 cites the Fife Herald, published at Cupar",FALSE
+"Davenport, IA",1,"Davenport, Iowa, USA",41.5224692,-90.5756401,town,USA,"Davenport, Scott County, Iowa, United States",,FALSE
+"Dayton, OH",2,"Dayton, Ohio, USA",39.7589478,-84.1916069,town,USA,"Dayton, Montgomery County, Ohio, United States",,FALSE
+"Decatur, IL",1,"Decatur, Illinois, USA",39.8454163,-88.9524151,town,USA,"Decatur, Macon County, Illinois, United States",,FALSE
+"Delaware, OH",1,"Delaware, Ohio, USA",40.2317686,-82.9651045,town,USA,"Delaware County, Ohio, United States",,FALSE
+Derby,4,"Derby, England, UK",52.9142235,-1.4719885,town,UK,"Derby, East Midlands, England, United Kingdom",,FALSE
+Derbyshire,1,"Derbyshire, England, UK",53.1666927,-1.5833223,region,UK,"Derbyshire, East Midlands, England, United Kingdom","region, not a town",FALSE
+"Detroit, MI",1,"Detroit, Michigan, USA",42.3315509,-83.0466403,town,USA,"Detroit, Wayne County, Michigan, United States",,FALSE
+Devizes,2,"Devizes, England, UK",51.3525027,-1.9958302,town,UK,"Devizes, Wiltshire, England, United Kingdom",,FALSE
+"Dover, DE",1,"Dover, Delaware, USA",39.1581680,-75.5243682,town,USA,"Dover, Kent County, Delaware, United States",,FALSE
+Droitwich,1,"Droitwich, England, UK",52.2685100,-2.1486075,town,UK,"Droitwich Spa, Wychavon, Worcestershire, England, WR9 8EJ, United Kingdom",,FALSE
+Droylsden,1,"Droylsden, England, UK",53.4786034,-2.1491964,town,UK,"Droylsden, Tameside, Greater Manchester, England, M43 6GN, United Kingdom",,FALSE
+Dudley,1,"Dudley, England, UK",52.5110832,-2.0816813,town,UK,"Dudley, West Midlands, England, DY1 1LS, United Kingdom",,FALSE
+"Dumfries, SCT",1,"Dumfries, Scotland, UK",55.0691831,-3.6106856,town,UK,"Dumfries, Dumfries and Galloway, Alba / Scotland, DG1 1BL, United Kingdom",,FALSE
+"Dundee, SCT",4,"Dundee, Scotland, UK",56.4605938,-2.9701900,town,UK,"Dundee, Dundee City, Alba / Scotland, DD1 1SA, United Kingdom",,FALSE
+"Dunfermline, SCT",1,"Dunfermline, Scotland, UK",56.0713724,-3.4616183,town,UK,"Dunfermline, Fife, Alba / Scotland, United Kingdom",,FALSE
+"East Saginaw, MI.",1,"Saginaw, Michigan, USA",43.4200387,-83.9490365,town,USA,"Saginaw, Carrollton Township, Saginaw County, Michigan, United States",East Saginaw merged into Saginaw in 1889,FALSE
+Eastbourne,2,"Eastbourne, England, UK",50.7664372,0.2781546,town,UK,"Eastbourne, East Sussex, England, United Kingdom",,FALSE
+Eckington,1,"Eckington, England, UK",53.3089836,-1.3557936,town,UK,"Eckington, North East Derbyshire, Derbyshire, East Midlands, England, United Kingdom",,FALSE
+Edgbaston,5,"Edgbaston, England, UK",52.4709941,-1.9225861,town,UK,"Edgbaston, Birmingham, West Midlands, England, B15 3AA, United Kingdom",,FALSE
+Edinburgh,2,"Edinburgh, Scotland, UK",55.9533456,-3.1883749,town,UK,"City of Edinburgh, Alba / Scotland, United Kingdom","the article lists both ""Edinburgh"" and ""Edinburgh, SCT""",FALSE
+"Edinburgh, SCT",21,"Edinburgh, Scotland, UK",55.9533456,-3.1883749,town,UK,"City of Edinburgh, Alba / Scotland, United Kingdom",,FALSE
+"Elie, SCT",1,"Elie, Scotland, UK",56.1904515,-2.8202468,town,UK,"Elie, Elie and Earlsferry, Fife, Alba / Scotland, KY9 1DB, United Kingdom",,FALSE
+"Elmira, NY",2,"Elmira, New York, USA",42.0897965,-76.8077338,town,USA,"City of Elmira, Chemung County, New York, United States",,FALSE
+"Enfield, London",1,"Enfield, London, England, UK",51.6520851,-0.0810175,town,UK,"Enfield, Greater London, England, EN2 6LD, United Kingdom",,FALSE
+Exeter,2,"Exeter, England, UK",50.7256138,-3.5269209,town,UK,"Exeter, Devon, Devon and Torbay, England, United Kingdom",,FALSE
+Farmingham,2,"Farningham, Kent, England, UK",51.3747477,0.2356021,town,UK,"Farningham, Sevenoaks, Kent, England, United Kingdom",probable source spelling of Farningham,FALSE
+Filey,2,"Filey, England, UK",54.2096884,-0.2888382,town,UK,"Filey, North Yorkshire, York and North Yorkshire, England, United Kingdom",,FALSE
+"Fitchburg, MA",1,"Fitchburg, Massachusetts, USA",42.5838984,-71.8038268,town,USA,"Fitchburg, Worcester County, Massachusetts, 01420, United States",,FALSE
+"Flint, MI.",1,"Flint, Michigan, USA",43.0161693,-83.6900211,town,USA,"Flint, Genesee County, Michigan, United States",,FALSE
+"Fraserburgh, SCT",1,"Fraserburgh, Scotland, UK",57.6935974,-2.0051497,town,UK,"Fraserburgh, Aberdeenshire, Alba / Scotland, AB43 9DA, United Kingdom",,FALSE
+"Galashiels, SCT",2,"Galashiels, Scotland, UK",55.6156505,-2.8061618,town,UK,"Galashiels, Scottish Borders, Alba / Scotland, TD1 3AA, United Kingdom",,FALSE
+"Genova, ITL",1,"Genoa, Italy",44.4072600,8.9338624,town,Italy,"Genova, Liguria, Italia",,FALSE
+"Glasgow, SCT",16,"Glasgow, Scotland, UK",55.8611550,-4.2501687,town,UK,"Glasgow, Glasgow City, Alba / Scotland, G2 1AL, United Kingdom",,FALSE
+"Greenock, SCT",2,"Greenock, Scotland, UK",55.9473423,-4.7564721,town,UK,"Greenock, Inverclyde, Alba / Scotland, PA15 1LS, United Kingdom",,FALSE
+Guildford,1,"Guildford, England, UK",51.2356068,-0.5732063,town,UK,"Guildford, Surrey, England, GU1 3DP, United Kingdom",,FALSE
+"Hamilton, Ontario",1,"Hamilton, Ontario, Canada",43.2560802,-79.8728583,town,Canada,"Hamilton, Golden Horseshoe, Ontario, Canada",,FALSE
+"Hammersmith, London",2,"Hammersmith, London, England, UK",51.4920377,-0.2236401,town,UK,"Hammersmith, London Borough of Hammersmith and Fulham, Greater London, England, W6 9YD, United Kingdom",,FALSE
+"Hampstead, London",7,"Hampstead, London, England, UK",51.5565300,-0.1783011,town,UK,"Hampstead, Greater London, England, NW3 1QG, United Kingdom",,FALSE
+Hanley,1,"Hanley, Stoke-on-Trent, England, UK",53.0261110,-2.1754512,town,UK,"Hanley, Stoke-on-Trent, England, ST1 1LD, United Kingdom",,FALSE
+"Hanover, MA",1,"Hanover, Massachusetts, USA",42.1131572,-70.8119859,town,USA,"Hanover, Plymouth County, Massachusetts, United States",,FALSE
+Harbourne,1,"Harborne, Birmingham, England, UK",52.4591151,-1.9480763,town,UK,"Harborne, Metchley, Birmingham, West Midlands, England, B17 9PN, United Kingdom",source spelling of Harborne,FALSE
+"Harrisburg, PA",1,"Harrisburg, Pennsylvania, USA",40.2663107,-76.8861122,town,USA,"Harrisburg, Dauphin County, Pennsylvania, United States",,FALSE
+Harrogate,1,"Harrogate, England, UK",53.9921491,-1.5391039,town,UK,"Harrogate, North Yorkshire, York and North Yorkshire, England, HG1 1QS, United Kingdom",,FALSE
+"Hartford, CT",1,"Hartford, Connecticut, USA",41.7645820,-72.6908547,town,USA,"Hartford, Capitol Planning Region, Connecticut, United States",,FALSE
+Hastings,8,"Hastings, England, UK",50.8550976,0.5821779,town,UK,"Hastings, East Sussex, England, United Kingdom",,FALSE
+"Helensburgh, SCT",1,"Helensburgh, Scotland, UK",56.0033464,-4.7342935,town,UK,"Helensburgh, Argyll and Bute, Alba / Scotland, G84 7NY, United Kingdom",,FALSE
+"Hendon, London",1,"Hendon, London, England, UK",51.5897175,-0.2216026,town,UK,"Hendon, London Borough of Barnet, Greater London, England, NW4 1BP, United Kingdom",,FALSE
+"Highgate, London",1,"Highgate, London, England, UK",51.5706446,-0.1492397,town,UK,"Highgate, London Borough of Camden, Greater London, England, N6 5JX, United Kingdom",,FALSE
+"Holborn, London",1,"Holborn, London, England, UK",51.5195982,-0.1137266,town,UK,"Holborn, London Borough of Camden, Greater London, England, WC1R 5AH, United Kingdom",,FALSE
+"Homer, NY",1,"Homer, New York, USA",42.6368711,-76.1787783,town,USA,"Town of Homer, Cortland County, New York, United States",,FALSE
+Huddersfield,2,"Huddersfield, England, UK",53.6466645,-1.7822482,town,UK,"Huddersfield, Kirklees, West Yorkshire, England, HD1 2AN, United Kingdom",,FALSE
+Hull,4,"Kingston upon Hull, England, UK",53.7435722,-0.3394758,town,UK,"Hull, Kingston upon Hull, Hull and East Yorkshire, England, HU1 3DX, United Kingdom",,FALSE
+"Huntly, SCT",3,"Huntly, Scotland, UK",57.4474806,-2.7864246,town,UK,"Huntly, Aberdeenshire, Alba / Scotland, AB54 8AE, United Kingdom",,FALSE
+Ilfracombe,2,"Ilfracombe, England, UK",51.2076674,-4.1254662,town,UK,"Ilfracombe, North Devon, Devon, Devon and Torbay, England, United Kingdom",,FALSE
+Ilkley,2,"Ilkley, England, UK",53.9257254,-1.8244410,town,UK,"Ilkley, Bradford, West Yorkshire, England, United Kingdom",,FALSE
+"Indiana, PA",1,"Indiana, Pennsylvania, USA",40.6424116,-79.1262839,town,USA,"Indiana County, Pennsylvania, United States",,FALSE
+"Inverness, SCT",1,"Inverness, Scotland, UK",57.4790124,-4.2257390,town,UK,"Inverness, Highland, Alba / Scotland, IV1 1AN, United Kingdom",,FALSE
+"Islington, London",8,"Islington, London, England, UK",51.5384287,-0.0999051,town,UK,"Islington, London Borough of Islington, Greater London, England, N1 2BH, United Kingdom",,FALSE
+Jarrow,1,"Jarrow, England, UK",54.9812514,-1.4908447,town,UK,"Jarrow, South Tyneside, Tyne and Wear, North East, England, NE32 3JU, United Kingdom",,FALSE
+"Jersey City, NJ",1,"Jersey City, New Jersey, USA",40.7215682,-74.0474550,town,USA,"Jersey City, Hudson County, New Jersey, United States",,FALSE
+"Keith, SCT",1,"Keith, Scotland, UK",57.5427292,-2.9523291,town,UK,"Keith, Moray, Alba / Scotland, AB55 5FF, United Kingdom",,FALSE
+Lancaster,1,"Lancaster, England, UK",54.0488219,-2.8013499,town,UK,"Lancaster, Lancashire, England, LA1 1JQ, United Kingdom",,FALSE
+Leamington,2,"Leamington, England, UK",52.2913394,-1.5364040,town,UK,"Royal Leamington Spa, Warwick, Warwickshire, England, United Kingdom",,FALSE
+Leeds,2,"Leeds, England, UK",53.7974185,-1.5437941,town,UK,"Leeds, West Yorkshire, England, LS1 6AL, United Kingdom",,FALSE
+Leicester,11,"Leicester, England, UK",52.6362000,-1.1331969,town,UK,"Leicester, City of Leicester, England, LE1 4FB, United Kingdom",,FALSE
+"Leominster, MA",1,"Leominster, Massachusetts, USA",42.5267443,-71.7614891,town,USA,"Leominster, Worcester County, Massachusetts, 01453, United States",,FALSE
+"Lewisham, London",2,"Lewisham, London, England, UK",51.4624292,-0.0101787,town,UK,"Lewisham, Greater London, England, SE13 6BB, United Kingdom",,FALSE
+Liverpool,28,"Liverpool, England, UK",53.3933411,-2.9166389,town,UK,"Liverpool, Liverpool City Region, England, United Kingdom",,FALSE
+London,154,"London, England, UK",51.5074456,-0.1277653,town,UK,"Greater London, England, United Kingdom",,FALSE
+London.,1,"London, England, UK",51.5074456,-0.1277653,town,UK,"Greater London, England, United Kingdom",,FALSE
+"Lowell, MA",1,"Lowell, Massachusetts, USA",42.6414437,-71.3085329,town,USA,"Lowell, Middlesex County, Massachusetts, United States",,FALSE
+"Lurgan, IRL",1,"Lurgan, Ireland",54.5410995,-8.1547343,town,Ireland,"Lurgan, Ballintra ED, Donegal Municipal District, County Donegal, Ulster, Éire / Ireland",,FALSE
+"Lynn, MA",1,"Lynn, Massachusetts, USA",42.4667630,-70.9494939,town,USA,"Lynn, Essex County, Massachusetts, United States",,FALSE
+Maidstone,4,"Maidstone, England, UK",51.2748258,0.5231646,town,UK,"Maidstone, Kent, England, United Kingdom",,FALSE
+Malvern,1,"Malvern, England, UK",52.1159559,-2.3258985,town,UK,"Malvern, Malvern Hills, Worcestershire, England, WR14 2HX, United Kingdom",,FALSE
+Manchester,10,"Manchester, England, UK",53.4424618,-2.2324547,town,UK,"Manchester, Greater Manchester, England, United Kingdom",,FALSE
+Mansfield,1,"Mansfield, England, UK",53.1443785,-1.1964165,town,UK,"Mansfield, Nottinghamshire, East Midlands, England, NG18 1JA, United Kingdom",,FALSE
+Matlock,1,"Matlock, England, UK",53.1374514,-1.5544694,town,UK,"Matlock, Derbyshire Dales, Derbyshire, East Midlands, England, DE4 3AP, United Kingdom",,FALSE
+Mealsgate,1,"Mealsgate, United Kingdom",54.7671081,-3.2314565,town,UK,"Mealsgate, Cumberland, England, CA7 1AH, United Kingdom",,FALSE
+"Menai, Wales",1,"Menai Bridge, Anglesey, Wales, UK",53.2259347,-4.1631064,town,UK,"Menai Bridge, Ynys Môn / Isle of Anglesey, Cymru / Wales, United Kingdom",,FALSE
+"Mentone, ITL",2,"Menton, France",43.7753495,7.5029213,town,France,"Menton, Nice, Alpes-Maritimes, Provence-Alpes-Côte d'Azur, France métropolitaine, 06500, France","the article marks this ITL; ""Mentone"" is the historic name of Menton, on the French side of the Riviera",FALSE
+"Milwaukee, WI",1,"Milwaukee, Wisconsin, USA",43.0386475,-87.9090751,town,USA,"Milwaukee, Milwaukee County, Wisconsin, United States",,FALSE
+"Moffat, SCT",2,"Moffat, Scotland, UK",55.3332407,-3.4443570,town,UK,"Moffat, Dumfries and Galloway, Alba / Scotland, DG10 9DL, United Kingdom",,FALSE
+"Montreal, Quebec",2,"Montreal, Quebec, Canada",45.5031824,-73.5698065,town,Canada,"Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, Canada",,FALSE
+"Montrose, SCT",1,"Montrose, Scotland, UK",56.7114295,-2.4681544,town,UK,"Montrose, Angus, Alba / Scotland, DD10 8QZ, United Kingdom",,FALSE
+"Nervi, ITL",2,"Nervi, Genoa, Italy",44.3833121,9.0391295,town,Italy,"Nervi, Levante, Genova, Liguria, 16167, Italia",,FALSE
+"New Barnet, London",1,"New Barnet, London, England, UK",51.6495724,-0.1710060,town,UK,"New Barnet, London Borough of Barnet, Greater London, England, EN4 8RN, United Kingdom",,FALSE
+"New York, NY",8,"New York, New York, USA",40.7127281,-74.0060152,town,USA,"New York, United States",,FALSE
+"Newark, NJ",2,"Newark, New Jersey, USA",40.7356570,-74.1723667,town,USA,"Newark, Essex County, New Jersey, United States",,FALSE
+Newcastle,8,"Newcastle upon Tyne, England, UK",54.9738474,-1.6131572,town,UK,"Newcastle upon Tyne, Tyne and Wear, North East, England, United Kingdom",,FALSE
+Newton,2,"Newton-le-Willows, England, UK",54.2970219,-1.6771463,town,UK,"Newton-le-Willows, North Yorkshire, York and North Yorkshire, England, United Kingdom",entry #108 names Crow Lane and cites the Wigan Observer,FALSE
+"North Berwick, SCT",2,"North Berwick, Scotland, UK",56.0581178,-2.7209129,town,UK,"North Berwick, East Lothian, Alba / Scotland, EH39 4HE, United Kingdom",,FALSE
+North Shields,3,"North Shields, England, UK",55.0087655,-1.4471035,town,UK,"North Shields, North Tyneside, Tyne and Wear, North East, England, NE29 0SZ, United Kingdom",,FALSE
+"Northampton, MA",1,"Northampton, Massachusetts, USA",42.3178989,-72.6311006,town,USA,"Northampton, Hampshire County, Massachusetts, United States",,FALSE
+Norwich,2,"Norwich, England, UK",52.6285576,1.2923954,town,UK,"Norwich, Norfolk, England, United Kingdom",,FALSE
+Norwood,1,"Norwood, England, UK",53.9744583,-1.6765656,town,UK,"Norwood, North Yorkshire, York and North Yorkshire, England, United Kingdom",,FALSE
+"Norwood, London",1,"Norwood, London, England, UK",51.4164053,-0.0940347,town,UK,"Upper Norwood, London Borough of Croydon, Greater London, England, SE19 3DP, United Kingdom",,FALSE
+Nottingham,8,"Nottingham, England, UK",52.9534193,-1.1496461,town,UK,"City of Nottingham, Nottinghamshire, East Midlands, England, United Kingdom",,FALSE
+"Orange, NJ",1,"Orange, New Jersey, USA",40.7709499,-74.2264601,town,USA,"Orange, Essex County, New Jersey, United States",,FALSE
+"Oswego, NY",1,"Oswego, New York, USA",43.4112973,-76.1279841,town,USA,"Oswego County, New York, United States",,FALSE
+"Paisley, SCT",1,"Paisley, Scotland, UK",55.8455828,-4.4239646,town,UK,"Paisley, Renfrewshire, Alba / Scotland, PA1 1BY, United Kingdom",,FALSE
+"Peabody, MA",1,"Peabody, Massachusetts, USA",42.5278731,-70.9286609,town,USA,"Peabody, Essex County, Massachusetts, 01960, United States",,FALSE
+"Peckham, London",1,"Peckham, London, England, UK",51.4734122,-0.0699321,town,UK,"Peckham, London Borough of Southwark, Greater London, England, SE15 5DW, United Kingdom",,FALSE
+"Peebles, SCT",1,"Peebles, Scotland, UK",55.6517553,-3.1885456,town,UK,"Peebles, Scottish Borders, Alba / Scotland, EH45 8SL, United Kingdom",,FALSE
+Pelsall,1,"Pelsall, England, UK",52.6284169,-1.9667399,town,UK,"Pelsall, Walsall, West Midlands, England, WS3 4BB, United Kingdom",,FALSE
+"Peterhead, SCT",1,"Peterhead, Scotland, UK",57.5052909,-1.7813194,town,UK,"Peterhead, Aberdeenshire, Alba / Scotland, AB42 1PT, United Kingdom",,FALSE
+"Philadelphia, PA",1,"Philadelphia, Pennsylvania, USA",39.9527237,-75.1635262,town,USA,"Philadelphia, Philadelphia County, Pennsylvania, United States",,FALSE
+"Pittsburgh, PA",1,"Pittsburgh, Pennsylvania, USA",40.4406968,-80.0025666,town,USA,"Pittsburgh, Allegheny County, Pennsylvania, United States",,FALSE
+"Plainfield [Scotch Plains], NJ",1,"Plainfield, New Jersey, USA",40.6201412,-74.4222416,town,USA,"Plainfield, Union County, New Jersey, United States",source gives Scotch Plains as an alternative,FALSE
+"Poplar, London",2,"Poplar, London, England, UK",51.5110713,-0.0144629,town,UK,"Poplar, London Borough of Tower Hamlets, Greater London, England, E14 6BP, United Kingdom",,FALSE
+"Portofino, ITL",1,"Portofino, Italy",44.3032530,9.2095582,town,Italy,"Portofino, Genova, Liguria, Italia",,FALSE
+"Poughkeepsie, NY",1,"Poughkeepsie, New York, USA",41.7065539,-73.9283672,town,USA,"City of Poughkeepsie, Dutchess County, New York, 12601, United States",,FALSE
+"Princeton, NJ",1,"Princeton, New Jersey, USA",40.3496953,-74.6597376,town,USA,"Princeton, Mercer County, New Jersey, United States",,FALSE
+"Providence, RI",1,"Providence, Rhode Island, USA",41.8239891,-71.4128343,town,USA,"Providence, Providence County, Rhode Island, United States",,FALSE
+Reading,2,"Reading, Berkshire, England, UK",51.4520064,-0.9684735,town,UK,"Reading, Oxfordshire, England, United Kingdom",,FALSE
+Reigate,2,"Reigate, England, UK",51.2376557,-0.2057067,town,UK,"Reigate, Reigate and Banstead, Surrey, England, RH2 7AA, United Kingdom",,FALSE
+Romsey,4,"Romsey, England, UK",50.9891396,-1.4999044,town,UK,"Romsey, Test Valley, Hampshire, England, United Kingdom",,FALSE
+"Roxbury, MA",1,"Roxbury, Massachusetts, USA",42.3289067,-71.0850853,town,USA,"Roxbury, Boston, Suffolk County, Massachusetts, 02119, United States",,FALSE
+S. S. Malta,1,,,,unmappable,,,a reading given aboard ship in passage; no fixed point,FALSE
+"Saint Johnsbury, VT",1,"Saint Johnsbury, Vermont, USA",44.4194940,-72.0156532,town,USA,"Saint Johnsbury, Caledonia County, Vermont, United States",,FALSE
+Sale,2,"Sale, Greater Manchester, England, UK",53.4244939,-2.3184150,town,UK,"Sale, Trafford, Greater Manchester, England, M33 2AB, United Kingdom",,FALSE
+Saltaire,1,"Saltaire, England, UK",53.8371089,-1.7906734,town,UK,"Saltaire, Shipley, Baildon, Bradford, West Yorkshire, England, United Kingdom",,FALSE
+"San Remo, ITL",3,"Sanremo, Italy",43.8362985,7.7772658,town,Italy,"Sanremo, Provincia di Imperia, Liguria, 18034, Italia",,FALSE
+Scarborough,5,"Scarborough, England, UK",54.2820009,-0.4011868,town,UK,"Scarborough, North Yorkshire, York and North Yorkshire, England, United Kingdom",,FALSE
+"Shanklin, Isle of Wight",1,"Shanklin, Isle of Wight, England, UK",50.6288132,-1.1779031,town,UK,"Shanklin, Isle of Wight, England, United Kingdom",,FALSE
+Shields,1,"South Shields, England, UK",54.9987414,-1.4321848,town,UK,"South Shields, South Tyneside, Tyne and Wear, North East, England, NE33 1NF, United Kingdom","ambiguous: the article lists North Shields separately, but #656 cites the Shields Daily Gazette of South Shields",FALSE
+Southam,2,"Southam, Warwickshire, England, UK",52.2530940,-1.3884119,town,UK,"Southam CP, Stratford-on-Avon, Warwickshire, England, United Kingdom","entries name Ladbroke Hall, near Southam",FALSE
+Southampton,1,"Southampton, England, UK",50.9025349,-1.4041890,town,UK,"Southampton, England, United Kingdom",,FALSE
+Southborough,2,"Southborough, Kent, England, UK",51.1642824,0.2633735,town,UK,"Southborough, Tunbridge Wells, Kent, England, United Kingdom",,FALSE
+"Southwark, London",1,"Southwark, London, England, UK",51.5061349,-0.1011379,town,UK,"Southwark, London Borough of Southwark, Greater London, England, SE1 9RE, United Kingdom",,FALSE
+"Springfield, MA",1,"Springfield, Massachusetts, USA",42.1018764,-72.5886727,town,USA,"Springfield, Hampden County, Massachusetts, United States",,FALSE
+"St. Andrews, SCT",2,"St. Andrews, Scotland, UK",56.3403678,-2.7950440,town,UK,"St Andrews, Fife, Alba / Scotland, KY16 9NU, United Kingdom",,FALSE
+St. Leonards,6,"St Leonards, Hastings, United Kingdom",50.8521318,0.5603008,town,UK,"St Leonards, Hastings, East Sussex, England, TN37 6AA, United Kingdom",,FALSE
+"St. Leonards, Hastings",4,"St Leonards, Hastings, United Kingdom",50.8521318,0.5603008,town,UK,"St Leonards, Hastings, East Sussex, England, TN37 6AA, United Kingdom",,FALSE
+Stockton,1,"Stockton-on-Tees, England, UK",54.5545780,-1.3584913,town,UK,"Stockton-on-Tees, Tees Valley, England, United Kingdom",,FALSE
+Stoke Newington,1,"Stoke Newington, England, UK",51.5578698,-0.0822482,town,UK,"Stoke Newington, London Borough of Hackney, Greater London, England, N16 9JS, United Kingdom",,FALSE
+"Streatham Hill, London",1,"Streatham Hill, London, England, UK",51.4406366,-0.1222490,town,UK,"Streatham Hill, London Borough of Lambeth, Greater London, England, SW2 3TH, United Kingdom",,FALSE
+Stretford,1,"Stretford, England, UK",53.4477056,-2.3234400,town,UK,"Stretford, Trafford, Greater Manchester, England, M32 9HP, United Kingdom",,FALSE
+Sunderland,3,"Sunderland, England, UK",54.9058512,-1.3828727,town,UK,"Sunderland, Tyne and Wear, North East, England, SR1 3HW, United Kingdom",,FALSE
+"Surbiton, London",1,"Surbiton, London, England, UK",51.3937557,-0.3033105,town,UK,"Surbiton, Royal Borough of Kingston upon Thames, Greater London, England, KT6 4LQ, United Kingdom",,FALSE
+"Sydenham, IRL",1,"Sydenham, Ireland",54.6040971,-5.8798789,town,Ireland,"Sydenham, Strandtown, Belfast City District, County Down, Northern Ireland / Tuaisceart Éireann, BT4 1ND, United Kingdom",,FALSE
+Taunton,1,"Taunton, England, UK",51.0147895,-3.1029086,town,UK,"Taunton, Somerset, England, TA1 1JD, United Kingdom",,FALSE
+"Toronto, Ontario",1,"Toronto, Ontario, Canada",43.6534817,-79.3839347,town,Canada,"Toronto, Golden Horseshoe, Ontario, Canada",,FALSE
+Tunbridge Wells,5,"Royal Tunbridge Wells, England, UK",51.1371483,0.2673446,town,UK,"Royal Tunbridge Wells, Tunbridge Wells, Kent, England, TN1 2DL, United Kingdom",,FALSE
+Tynemouth,1,"Tynemouth, England, UK",55.0177847,-1.4256042,town,UK,"Tynemouth, North Tyneside, Tyne and Wear, North East, England, NE30 4LY, United Kingdom",,FALSE
+"Upper Perthshire, SCT",1,"Perth and Kinross, Scotland, UK",56.5000000,-3.7500000,region,UK,"Perth and Kinross, Alba / Scotland, United Kingdom","region, not a town",FALSE
+Wallasey,1,"Wallasey, England, UK",53.4241208,-3.0394101,town,UK,"Wallasey, Wirral, Liverpool City Region, England, CH45 7NE, United Kingdom",,FALSE
+"Washington, DC",2,"Washington, District of Columbia, USA",38.8950982,-77.0363849,town,USA,"Washington, District of Columbia, United States",,FALSE
+Wellingborough,2,"Wellingborough, England, UK",52.3018900,-0.6937309,town,UK,"Wellingborough, North Northamptonshire, England, NN8 1AF, United Kingdom",,FALSE
+"Westboro, MA",1,"Westborough, Massachusetts, USA",42.2694308,-71.6129907,town,USA,"Westborough, Worcester County, Massachusetts, 01581, United States",source spelling of Westborough,FALSE
+Westminster,1,"Westminster, England, UK",51.5004439,-0.1265398,town,UK,"Westminster, Millbank, City of Westminster, Greater London, England, SW1P 3JX, United Kingdom",,FALSE
+"Westminster, London",1,"Westminster, London, England, UK",51.5004439,-0.1265398,town,UK,"Westminster, Millbank, City of Westminster, Greater London, England, SW1P 3JX, United Kingdom",,FALSE
+Weston-Super-Mare,1,"Weston-super-Mare, England, UK",51.3471927,-2.9778916,town,UK,"Weston-super-Mare, North Somerset, England, United Kingdom",,FALSE
+Weybridge Heath,4,"Weybridge, Surrey, England, UK",51.3727175,-0.4549297,town,UK,"Weybridge, Elmbridge, Surrey, England, United Kingdom",,FALSE
+Whitby,2,"Whitby, England, UK",54.4866526,-0.6135315,town,UK,"Whitby, North Yorkshire, York and North Yorkshire, England, United Kingdom",,FALSE
+"Whitechapel, London",1,"Whitechapel, London, England, UK",51.5174861,-0.0659685,town,UK,"Whitechapel, London Borough of Tower Hamlets, Greater London, England, E1 1DT, United Kingdom",,FALSE
+Wigston Magna,1,"Wigston, Leicestershire, England, UK",52.5862795,-1.1059076,town,UK,"Wigston, Oadby and Wigston, Leicestershire, England, LE18 1DT, United Kingdom",,FALSE
+"Williamsport, PA",1,"Williamsport, Pennsylvania, USA",41.2411556,-77.0011096,town,USA,"Williamsport, Lycoming County, Pennsylvania, United States",,FALSE
+"Wilmington, DE",1,"Wilmington, Delaware, USA",39.7459468,-75.5465890,town,USA,"Wilmington, New Castle County, Delaware, United States",,FALSE
+Wimbledon,1,"Wimbledon, England, UK",51.4214787,-0.2064027,town,UK,"Wimbledon, Greater London, England, SW19 7NL, United Kingdom",,FALSE
+Winchester,1,"Winchester, England, UK",51.0612766,-1.3131692,town,UK,"Winchester, Hampshire, England, SO23 9LF, United Kingdom",,FALSE
+"Wood Green, London",1,"Wood Green, London, England, UK",51.5972054,-0.1099585,town,UK,"Wood Green, Greater London, England, N22 6DR, United Kingdom",,FALSE
+Woodford,4,"Woodford, London, England, UK",51.6041652,0.0324525,town,UK,"Woodford, London Borough of Redbridge, Greater London, England, IG8 7BX, United Kingdom",,FALSE
+Woolwich,1,"Woolwich, England, UK",51.4826696,0.0623335,town,UK,"Woolwich, Greater London, England, SE18 6FX, United Kingdom",,FALSE
+"Woolwich, London",1,"Woolwich, London, England, UK",51.4826696,0.0623335,town,UK,"Woolwich, Greater London, England, SE18 6FX, United Kingdom",,FALSE
+"Worcester, MA",1,"Worcester, Massachusetts, USA",42.2625621,-71.8018877,town,USA,"Worcester, Worcester County, Massachusetts, United States",,FALSE
+Wrexham,1,"Wrexham, Wales, UK",53.0465084,-2.9937869,town,UK,"Wrexham, Cymru / Wales, LL11 1AP, United Kingdom",,FALSE
+York,3,"York, England, UK",53.9656579,-1.0743052,town,UK,"York, York and North Yorkshire, England, United Kingdom",,FALSE
+"[Bordighera, ITL]",1,"Bordighera, Italy",43.7939893,7.6731108,inferred,Italy,"Bordighera, Provincia di Imperia, Liguria, 18012, Italia",place inferred by the editors,FALSE
+"[Camden], London",1,"Camden, London, England, UK",51.5427966,-0.1624803,inferred,UK,"London Borough of Camden, Greater London, England, United Kingdom",place inferred by the editors,FALSE
+[London],6,"London, England, UK",51.5074456,-0.1277653,inferred,UK,"Greater London, England, United Kingdom",place inferred by the editors,FALSE
+unknown,5,,,,unmappable,,,location not recorded,FALSE

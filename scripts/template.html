@@ -1,0 +1,1032 @@
+<title>George MacDonald: Lectures and Performances, 1854–1891</title>
+<style>__LEAFLET_CSS__</style>
+<style>
+:root{
+  color-scheme: light;
+  --page:#f9f9f7; --surface:#fcfcfb;
+  --ink:#0b0b0b; --ink-2:#52514e; --muted:#898781;
+  --grid:#e1e0d9; --axis:#c3c2b7; --border:rgba(11,11,11,0.10);
+  --lecture:#2a78d6; --performance:#eb6834; --other:#1baf7a;
+  --land:#eae7e0; --land-line:#cfcbc0; --route:#898781;
+  --chip:#ffffff; --chip-on:#0b0b0b; --chip-on-ink:#fcfcfb;
+  --shadow:0 1px 2px rgba(11,11,11,.06),0 8px 24px rgba(11,11,11,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root:where(:not([data-theme="light"])){
+    color-scheme: dark;
+    --page:#0d0d0d; --surface:#1a1a19;
+    --ink:#ffffff; --ink-2:#c3c2b7; --muted:#898781;
+    --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,0.10);
+    --lecture:#3987e5; --performance:#d95926; --other:#199e70;
+    --land:#262623; --land-line:#3f3f3a; --route:#898781;
+    --chip:#232321; --chip-on:#fcfcfb; --chip-on-ink:#0b0b0b;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --page:#0d0d0d; --surface:#1a1a19;
+  --ink:#ffffff; --ink-2:#c3c2b7; --muted:#898781;
+  --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,0.10);
+  --lecture:#3987e5; --performance:#d95926; --other:#199e70;
+  --land:#262623; --land-line:#3f3f3a; --route:#898781;
+  --chip:#232321; --chip-on:#fcfcfb; --chip-on-ink:#0b0b0b;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--page); color:var(--ink);
+  font:400 15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1240px; margin:0 auto; padding:28px 20px 64px}
+
+header h1{font-size:26px; line-height:1.25; margin:0 0 6px; letter-spacing:-.01em}
+header p{margin:0; color:var(--ink-2); font-size:14px; max-width:70ch}
+header p a{color:inherit}
+.hdr-row{display:flex; gap:16px; align-items:flex-start; justify-content:space-between; flex-wrap:wrap}
+
+.panel{background:var(--surface); border:1px solid var(--border); border-radius:12px; box-shadow:var(--shadow)}
+.panel + .panel{margin-top:16px}
+.panel-hd{display:flex; gap:12px; align-items:baseline; justify-content:space-between;
+  padding:14px 16px 0; flex-wrap:wrap}
+.panel-hd h2{margin:0; font-size:13px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; color:var(--ink-2)}
+.panel-hd .hint{font-size:12.5px; color:var(--muted)}
+
+/* ── filter row ─────────────────────────────────────────────── */
+.filters{display:flex; gap:8px 10px; flex-wrap:wrap; align-items:center; margin:18px 0 16px}
+.fgroup{display:flex; gap:6px; align-items:center; flex-wrap:wrap}
+.fgroup + .fgroup{margin-left:6px; padding-left:12px; border-left:1px solid var(--border)}
+.flabel{font-size:12px; color:var(--muted); letter-spacing:.03em; text-transform:uppercase; margin-right:2px}
+.chip{
+  display:inline-flex; align-items:center; gap:7px; min-height:32px; padding:0 11px;
+  border:1px solid var(--border); border-radius:999px; background:var(--chip);
+  color:var(--ink-2); font-size:13.5px; cursor:pointer; user-select:none;
+  transition:background .12s, color .12s, border-color .12s;
+}
+.chip:hover{border-color:var(--axis)}
+.chip:focus-visible{outline:2px solid var(--lecture); outline-offset:2px}
+.chip .sw{width:10px; height:10px; border-radius:3px; flex:none}
+.chip[aria-pressed="true"]{background:var(--chip-on); color:var(--chip-on-ink); border-color:var(--chip-on)}
+.chip[aria-pressed="true"] .ct{opacity:.72}
+.chip .ct{font-variant-numeric:tabular-nums; font-size:12.5px; color:inherit; opacity:.6}
+.chip.plain[aria-pressed="false"]{opacity:.65}
+button.link{background:none; border:0; color:var(--ink-2); font:inherit; font-size:13.5px;
+  cursor:pointer; text-decoration:underline; text-underline-offset:3px; padding:6px 4px}
+button.link:hover{color:var(--ink)}
+@media (max-width:720px){
+  /* the group dividers read as stray indents once the row wraps to one group per line */
+  .fgroup + .fgroup{margin-left:0; padding-left:0; border-left:0}
+  .wrap{padding:20px 14px 48px}
+  header h1{font-size:22px}
+}
+
+/* ── map ────────────────────────────────────────────────────── */
+#map{display:block; width:100%; height:clamp(340px,54vh,560px); border-radius:0 0 12px 12px;
+  background:var(--surface); z-index:0}
+.mapwrap{position:relative}
+.land{fill:var(--land); stroke:var(--land-line)}
+.route{fill:none; stroke:var(--route); opacity:.34; stroke-linecap:round}
+path.dot{cursor:pointer}
+path.dot.est{stroke-dasharray:3 2}
+path.dot.sel{stroke:var(--ink) !important; stroke-width:2.5px}
+
+/* Leaflet chrome, restyled onto the page's own tokens */
+.leaflet-container{font:inherit; background:var(--surface); outline-offset:2px}
+.leaflet-container a{color:var(--ink-2)}
+.leaflet-bar{border:1px solid var(--border); box-shadow:none}
+.leaflet-bar a,.leaflet-bar a:hover{background:var(--chip); color:var(--ink-2);
+  border-bottom:1px solid var(--border); width:28px; height:28px; line-height:28px}
+.leaflet-bar a:hover{color:var(--ink)}
+.leaflet-container .leaflet-control-attribution{
+  background:color-mix(in srgb, var(--surface) 86%, transparent); color:var(--muted);
+  font-size:10.5px; padding:1px 6px; border-radius:6px 0 0 0; box-shadow:none}
+.leaflet-container .leaflet-control-attribution a{color:var(--ink-2); text-decoration:none}
+.leaflet-container .leaflet-control-attribution a:hover{text-decoration:underline}
+.leaflet-tooltip.maplabel{background:none; border:0; box-shadow:none; padding:0; margin:0;
+  color:var(--ink-2); font-size:11px; white-space:nowrap; pointer-events:none;
+  text-shadow:0 0 3px var(--surface),0 0 3px var(--surface),0 0 3px var(--surface),0 0 2px var(--surface)}
+.leaflet-tooltip.maplabel::before{display:none}
+
+/* ── timeline ───────────────────────────────────────────────── */
+#overview{display:block; width:100%; height:132px}
+#detail{display:block; width:100%; height:170px}  /* re-sized to the packed rows at draw time */
+.bar{shape-rendering:crispEdges}
+.tick text{font-size:11px; fill:var(--muted); font-variant-numeric:tabular-nums}
+.tick line{stroke:var(--grid); shape-rendering:crispEdges}
+.axisline{stroke:var(--axis); shape-rendering:crispEdges}
+.brush-bg{fill:var(--ink); opacity:.055}
+.brush-win{fill:none; stroke:var(--ink); stroke-width:1px; shape-rendering:crispEdges}
+.brush-hit{fill:transparent; cursor:crosshair}
+.brush-handle{fill:var(--ink); opacity:.55; cursor:ew-resize; rx:1.5}
+.brush-move{fill:transparent; cursor:move}
+.ev{cursor:pointer}
+.ev.est{fill:none; stroke-width:1.5px; stroke-dasharray:2.5 1.8}
+.ev.sel{stroke:var(--ink); stroke-width:2px; stroke-dasharray:none}
+.ev.x{opacity:.45}
+.empty{font-size:13px; fill:var(--muted)}
+
+/* ── search ─────────────────────────────────────────────────── */
+.search input{
+  min-height:32px; min-width:210px; padding:0 11px; font:inherit; font-size:13.5px;
+  color:var(--ink); background:var(--chip); border:1px solid var(--border); border-radius:999px;
+}
+.search input::placeholder{color:var(--muted)}
+.search input:focus-visible{outline:2px solid var(--lecture); outline-offset:2px}
+.subject-chips{margin:-6px 0 16px}
+.subject-chips .chip{background:var(--chip-on); color:var(--chip-on-ink); border-color:var(--chip-on)}
+.subject-chips .chip .x{opacity:.6; font-size:15px; line-height:1}
+
+/* ── subjects ("What") ──────────────────────────────────────── */
+.subjects{padding:8px 16px 16px; max-height:520px; overflow-y:auto}
+.srow{
+  display:grid; grid-template-columns:15px minmax(120px,1.35fr) 3.2fr 116px 42px;
+  gap:10px; align-items:center; width:100%; padding:3px 6px; border:0; border-radius:7px;
+  background:none; color:inherit; font:inherit; font-size:13.5px; text-align:left; cursor:pointer;
+}
+.srow:hover{background:color-mix(in srgb, var(--ink) 5%, transparent)}
+.srow:focus-visible{outline:2px solid var(--lecture); outline-offset:-2px}
+.srow[aria-pressed="true"]{background:color-mix(in srgb, var(--lecture) 14%, transparent)}
+.srow.work{font-size:12.5px; color:var(--ink-2)}
+.srow.work .s-name{padding-left:12px}
+.srow .s-tw{color:var(--muted); font-size:9px; line-height:1; transition:transform .12s;
+  display:inline-block; text-align:center}
+.srow .s-tw.open{transform:rotate(90deg)}
+.srow .s-name{overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.srow .s-n{text-align:right; font-variant-numeric:tabular-nums; color:var(--ink-2)}
+.srow .s-bar{height:13px; display:block}
+.srow .s-spark{height:20px; display:block; opacity:.85}
+.s-head{
+  display:grid; grid-template-columns:15px minmax(120px,1.35fr) 3.2fr 116px 42px;
+  gap:10px; padding:0 6px 6px; font-size:11px; letter-spacing:.04em; text-transform:uppercase;
+  color:var(--muted); border-bottom:1px solid var(--grid); margin-bottom:6px;
+}
+.s-head .s-n{text-align:right}
+.subjects .empty-msg{padding:14px 6px; color:var(--muted); font-size:13px}
+@media (max-width:720px){
+  .srow, .s-head{grid-template-columns:15px minmax(90px,1.2fr) 2fr 42px}
+  .srow .s-cell-spark, .s-head .s-spark-h{display:none}
+}
+
+/* ── tooltip ────────────────────────────────────────────────── */
+#tip{
+  position:fixed; z-index:20; pointer-events:none; opacity:0; transition:opacity .1s;
+  max-width:330px; padding:9px 11px; border-radius:9px; background:var(--surface);
+  border:1px solid var(--border); box-shadow:var(--shadow); font-size:13px; line-height:1.42;
+}
+#tip .t-hd{font-weight:600; margin-bottom:2px}
+#tip .t-sub{color:var(--ink-2); font-size:12.5px}
+#tip .t-de{color:var(--ink-2); font-size:12px; margin-top:5px; border-top:1px solid var(--border); padding-top:5px}
+
+/* ── entry list (the table view) ────────────────────────────── */
+.tablewrap{overflow-x:auto; max-height:480px; overflow-y:auto; border-radius:0 0 12px 12px}
+table{border-collapse:collapse; width:100%; font-size:13.5px}
+thead th{
+  position:sticky; top:0; z-index:1; background:var(--surface); text-align:left;
+  font-size:11.5px; font-weight:600; letter-spacing:.04em; text-transform:uppercase;
+  color:var(--muted); padding:9px 12px; border-bottom:1px solid var(--border); white-space:nowrap;
+}
+tbody td{padding:8px 12px; border-bottom:1px solid var(--grid); vertical-align:top}
+tbody tr{cursor:pointer}
+tbody tr:hover{background:color-mix(in srgb, var(--ink) 4%, transparent)}
+tbody tr.sel{background:color-mix(in srgb, var(--lecture) 12%, transparent)}
+td.n,td.d{font-variant-numeric:tabular-nums; color:var(--ink-2); white-space:nowrap}
+td.de{color:var(--ink-2); font-size:12.5px}
+.badge{display:inline-flex; align-items:center; gap:5px; white-space:nowrap}
+.badge .sw{width:8px; height:8px; border-radius:2px; flex:none}
+.flag{display:inline-block; margin-left:6px; padding:0 5px; border-radius:4px; font-size:10.5px;
+  letter-spacing:.03em; text-transform:uppercase; color:var(--muted); border:1px solid var(--border)}
+.count{font-size:13px; color:var(--ink-2); font-variant-numeric:tabular-nums}
+footer{margin-top:26px; font-size:12.5px; color:var(--muted); line-height:1.6}
+footer code{font-size:12px}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="hdr-row">
+    <div>
+      <h1>George MacDonald: lectures and performances, 1854–1891</h1>
+      <p>700 recorded engagements across Britain, Ireland, North America and the Riviera, from
+      Joe Ricke, Ashley Chu, Kendra Smalley, Kaylen Dwyer and Caleb Hoelscher,
+      &ldquo;George MacDonald: A Timeline of Lectures and Performances, 1855&ndash;1891,&rdquo;
+      <i>North Wind</i> 37 (2018). Brush the timeline to filter the map; click a place to filter the timeline.</p>
+    </div>
+    <button class="chip plain" id="theme" aria-pressed="false" title="Toggle light and dark">
+      <span id="theme-t">Dark</span>
+    </button>
+  </div>
+
+  <div class="filters" role="group" aria-label="Filters">
+    <span class="flabel">Type</span>
+    <div class="fgroup" id="cats"></div>
+    <div class="fgroup">
+      <span class="flabel">Show</span>
+      <button class="chip plain" data-tog="est" aria-pressed="true">Estimated dates <span class="ct" id="ct-est"></span></button>
+      <button class="chip plain" data-tog="canc" aria-pressed="true">Cancelled <span class="ct" id="ct-canc"></span></button>
+      <button class="chip plain" data-tog="routes" aria-pressed="false">Routes</button>
+      <button class="chip plain" data-tog="labels" aria-pressed="true">Place labels</button>
+    </div>
+    <div class="fgroup">
+      <span class="flabel">Zoom</span>
+      <button class="chip plain" data-fit="uk" aria-pressed="false">Britain &amp; Ireland</button>
+      <button class="chip plain" data-fit="us" aria-pressed="false">North America</button>
+      <button class="chip plain" data-fit="eu" aria-pressed="false">Riviera</button>
+      <button class="chip plain" data-fit="all" aria-pressed="false">All</button>
+    </div>
+    <div class="fgroup">
+      <label class="flabel" for="q">Search</label>
+      <span class="search">
+        <input id="q" type="search" placeholder="title, place or details&hellip;" autocomplete="off"
+               spellcheck="false" aria-label="Search titles, places and details">
+      </span>
+    </div>
+    <div class="fgroup"><button class="link" id="reset">Reset all filters</button></div>
+  </div>
+  <div id="subject-chips" class="filters subject-chips" hidden></div>
+</header>
+
+<section class="panel">
+  <div class="panel-hd">
+    <h2>Where</h2>
+    <span class="hint" id="map-hint"></span>
+  </div>
+  <div class="mapwrap">
+    <div id="map" role="application" aria-label="Map of engagement locations"></div>
+  </div>
+</section>
+
+<section class="panel">
+  <div class="panel-hd">
+    <h2>When</h2>
+    <span class="hint">Drag across the year bars to select a period &middot; double-click to clear</span>
+  </div>
+  <svg id="overview" role="img" aria-label="Engagements per year, by type"></svg>
+  <div class="panel-hd" style="padding-top:4px">
+    <h2 id="detail-h">Selected period</h2>
+    <span class="hint">Hollow, dashed marks are dates the editors estimated</span>
+  </div>
+  <svg id="detail" role="img" aria-label="Individual engagements in the selected period"></svg>
+</section>
+
+<section class="panel">
+  <div class="panel-hd">
+    <h2>What</h2>
+    <span class="hint">Click an author to open their individual works &middot; click any row to filter</span>
+  </div>
+  <div class="subjects" id="subjects"></div>
+</section>
+
+<section class="panel">
+  <div class="panel-hd">
+    <h2>Entries</h2>
+    <span class="count" id="listcount"></span>
+  </div>
+  <div class="tablewrap">
+    <table>
+      <thead><tr>
+        <th>No.</th><th>Date</th><th>Type</th><th>Title</th><th>Location</th><th>Details</th>
+      </tr></thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <p><b>Reading the marks.</b> A solid mark is a date the editors gave plainly; a hollow, dashed
+  mark is one they bracketed as estimated &mdash; a month, a season, a year, or a choice between
+  days. Estimated entries are placed at the <i>earliest</i> possible date. Cancelled engagements
+  are drawn at reduced opacity. Six entries have no recorded location and appear in the timeline
+  and the table but not on the map.</p>
+  <p><b>Types.</b> The article&rsquo;s twelve labels collapse to four: lecture, performance,
+  reading, sermon. Two entries are both a lecture and a sermon and appear under either filter.
+  Readings and sermons share one colour on the map and timeline (five entries between them);
+  the exact type is named in the tooltip and the table. Twenty entries had no type in the source,
+  or one the editors bracketed, and are marked <span class="flag">inferred</span>.</p>
+  <p><b>Places</b> are geocoded from OpenStreetMap; four are regions rather than towns and sit at
+  the region centroid. Source spellings were resolved against each entry&rsquo;s own citations
+  &mdash; see <code>macdonald_places.csv</code> for every judgement call.</p>
+</footer>
+</div>
+
+<div id="tip" role="tooltip"></div>
+
+<script id="data" type="application/json">__DATA__</script>
+<script>__LEAFLET_JS__</script>
+<script>
+"use strict";
+const DATA = JSON.parse(document.getElementById('data').textContent);
+const EV = DATA.events, PLACES = DATA.places, BASEMAP = DATA.basemap;
+
+const CATS = [
+  {id:'lecture',     label:'Lecture',     color:'var(--lecture)'},
+  {id:'performance', label:'Performance', color:'var(--performance)'},
+  {id:'reading',     label:'Reading',     color:'var(--other)'},
+  {id:'sermon',      label:'Sermon',      color:'var(--other)'},
+];
+// three validated colour slots; readings and sermons (5 entries) share slot 3
+const COLOR = {lecture:'var(--lecture)', performance:'var(--performance)',
+               reading:'var(--other)', sermon:'var(--other)'};
+const colorOf = e => COLOR[e.cat[0]];
+
+const T0 = Date.UTC(1854,0,1), T1 = Date.UTC(1892,0,1);
+const day = s => { const [y,m,d] = s.split('-').map(Number); return Date.UTC(y,m-1,d); };
+EV.forEach(e => { e.t = day(e.d); e.t2 = day(e.e); });
+const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+const fmt = t => { const d = new Date(t); return MONTHS[d.getUTCMonth()].slice(0,3)+' '+d.getUTCDate()+', '+d.getUTCFullYear(); };
+
+// ── state ───────────────────────────────────────────────────────
+const S = {
+  cats: new Set(CATS.map(c=>c.id)),
+  est:true, canc:true, routes:false, labels:true,
+  range:null,          // [t0,t1] or null
+  place:null,          // location string or null
+  subjects:new Set(),  // "group" or "group␟work" keys; empty = no subject filter
+  q:'',                // free-text search
+  open:new Set(),      // expanded groups in the What panel
+  hi:null,             // entry no. under the cursor / clicked
+};
+
+// a subject key is the group alone, or the group and work joined by a unit separator
+const SEP = '␟';
+const key = (g, w) => w == null ? g : g + SEP + w;
+EV.forEach(e => {
+  e.keys = new Set();
+  for (const [g, w] of e.sub){ e.keys.add(g); e.keys.add(key(g, w)); }
+  e.hay = (e.ti + ' ' + e.lo + ' ' + e.de + ' ' + e.sub.flat().join(' ')).toLowerCase();
+});
+
+const visible = e =>
+  e.cat.some(c => S.cats.has(c)) &&
+  (S.est  || e.c) &&
+  (S.canc || !e.x);
+const inRange = e => !S.range || (e.t2 >= S.range[0] && e.t <= S.range[1]);
+const inPlace = e => !S.place || e.lo === S.place;
+const inSubject = e => !S.subjects.size || [...S.subjects].some(k => e.keys.has(k));
+const matchesQ = e => !S.q || e.hay.includes(S.q);
+const selection = () =>
+  EV.filter(e => visible(e) && inRange(e) && inPlace(e) && inSubject(e) && matchesQ(e));
+
+const svgNS = 'http://www.w3.org/2000/svg';
+const el = (n, a) => { const e = document.createElementNS(svgNS, n);
+  for (const k in a) e.setAttribute(k, a[k]); return e; };
+
+// ── map (Leaflet, no tile layer) ────────────────────────────────
+// Leaflet drives pan/zoom; the "basemap" is the clipped Natural Earth GeoJSON drawn as vectors,
+// so the page still makes no network requests at all.
+const FITS = {
+  uk:  [[49.2, -11.5], [61.2,  3.0]],
+  us:  [[36.5, -92.0], [49.0, -63.0]],
+  eu:  [[42.5,   5.0], [46.5, 10.5]],
+  all: [[33.0, -80.0], [60.0, 12.0]],
+};
+let lastFit = 'all', userMoved = false;      // so a resize re-fits, but never fights a pan
+
+const map = L.map('map', {
+  zoomSnap: 0.25, zoomDelta: 0.5, wheelPxPerZoomLevel: 120,
+  minZoom: 2, maxZoom: 13, worldCopyJump: false,
+  maxBounds: [[-5, -170], [83, 60]], maxBoundsViscosity: 0.7,
+  attributionControl: true, zoomControl: true,
+});
+map.attributionControl.setPrefix('').addAttribution(
+  'Boundaries <a href="https://www.naturalearthdata.com/">Natural Earth</a> &middot; ' +
+  'places geocoded from <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>');
+
+L.geoJSON(BASEMAP, {
+  interactive: false,
+  style: {className: 'land', stroke: true, weight: 0.7, fill: true, fillOpacity: 1},
+}).addTo(map);
+
+const routeLayer = L.layerGroup().addTo(map);
+const dotLayer   = L.layerGroup().addTo(map);
+
+function fit(which){
+  const b = FITS[which] || FITS.all;
+  map._presetFit = true;
+  map.fitBounds(L.latLngBounds(b), {padding: [24, 24], animate: false});
+  map._presetFit = false;
+  lastFit = which; userMoved = false;
+  document.querySelectorAll('[data-fit]').forEach(x =>
+    x.setAttribute('aria-pressed', String(x.dataset.fit === which)));
+  placeLabels();
+}
+// Labels are collision-culled in screen space, so they must be recomputed after every move.
+map.on('zoomend moveend', placeLabels);
+// A hand-driven pan or zoom clears the preset highlight and stops a resize from re-fitting.
+document.getElementById('map').addEventListener('pointerdown', markMoved);
+document.getElementById('map').addEventListener('wheel', markMoved, {passive: true});
+map.on('zoomstart', ev => { if (!map._presetFit) markMoved(); });
+function markMoved(){
+  userMoved = true;
+  document.querySelectorAll('[data-fit]').forEach(x => x.setAttribute('aria-pressed', 'false'));
+}
+
+// ── map marks ───────────────────────────────────────────────────
+const PLACE = new Map(PLACES.map(p => [p.lo, p]));
+
+// The article's own name reads better on the map than the OSM one ("City of London",
+// "Aberdeen City"); drop the region code and any editorial brackets.
+const REGION_SUFFIX = /,\s*(SCT|IRL|ITL|Wales|France|Ontario|Quebec|London|[A-Z]{2}\.?)\]?\s*$/;
+const shortName = lo => lo.replace(REGION_SUFFIX, '').replace(/[[\]]/g, '').replace(/\.$/, '');
+
+function drawMap(){
+  const sel = selection();
+  const byPlace = new Map();
+  for (const e of sel){
+    if (e.lat == null) continue;
+    let g = byPlace.get(e.lo);
+    if (!g) byPlace.set(e.lo, g = {lo:e.lo, lat:e.lat, lon:e.lon, gp:e.gp, ev:[]});
+    g.ev.push(e);
+  }
+  // busiest first, so the small dots and their labels land on top of the big ones
+  const groups = [...byPlace.values()].sort((a,b) => b.ev.length - a.ev.length);
+
+  dotLayer.clearLayers();
+  for (const g of groups){
+    const n = g.ev.length;
+    const counts = {};
+    for (const e of g.ev) for (const c of e.cat) counts[c] = (counts[c]||0)+1;
+    const dom = Object.entries(counts).sort((a,b)=>b[1]-a[1])[0][0];
+    const r = Math.min(18, 3.2 + Math.sqrt(n) * 1.9);
+    const allEst = g.ev.every(e => !e.c);
+
+    const m = L.circleMarker([g.lat, g.lon], {
+      radius: r, weight: 2, color: 'var(--surface)', fillColor: COLOR[dom], fillOpacity: 0.82,
+      className: 'dot' + (allEst ? ' est' : '') + (S.place === g.lo ? ' sel' : ''),
+      bubblingMouseEvents: false,
+    });
+    m._lo = g.lo; m._n = n;
+    m.bindTooltip(shortName(g.lo), {
+      permanent: true, direction: 'right', offset: [r + 3, 0],
+      className: 'maplabel', opacity: 1, interactive: false,
+    });
+    m.on('click', () => { S.place = (S.place === g.lo) ? null : g.lo; render(); });
+    m.on('mouseover', ev => showTip(ev.originalEvent, placeTip(g.lo)));
+    m.on('mouseout', hideTip);
+    m.addTo(dotLayer);
+  }
+
+  routeLayer.clearLayers();
+  if (S.routes){
+    const pts = sel.filter(e => e.lat != null).sort((a,b) => a.t - b.t);
+    const segs = [];
+    let prev = null;
+    for (const e of pts){
+      if (prev && (prev.lat !== e.lat || prev.lon !== e.lon))
+        segs.push([[prev.lat, prev.lon], [e.lat, e.lon]]);
+      prev = e;
+    }
+    if (segs.length) L.polyline(segs, {className: 'route', weight: 1, interactive: false})
+      .addTo(routeLayer);
+  }
+  placeLabels();
+
+  const mapped = sel.filter(e => e.lat != null).length;
+  document.getElementById('map-hint').textContent =
+    `${groups.length} place${groups.length===1?'':'s'} · ${mapped} engagement${mapped===1?'':'s'}` +
+    (sel.length - mapped ? ` · ${sel.length - mapped} with no recorded location` : '');
+}
+
+function placeTip(lo){
+  const evs = selection().filter(e => e.lo === lo);
+  const by = {}; for (const e of evs) for (const c of e.cat) by[c] = (by[c]||0)+1;
+  const p = PLACE.get(lo);
+  return `<div class="t-hd">${esc(lo)}</div>
+    <div class="t-sub">${evs.length} engagement${evs.length===1?'':'s'} &middot;
+      ${Object.entries(by).map(([c,n]) => `${n} ${c}${n>1?'s':''}`).join(', ')}</div>
+    ${p && p.note ? `<div class="t-de">${esc(p.note)}</div>` : ''}
+    <div class="t-de">${esc(evs.slice(0,4).map(e => e.raw + ' — ' + (e.ti || '(no title)')).join(' · '))}${evs.length>4?' …':''}</div>`;
+}
+
+// Greedy screen-space collision pass, busiest place first: a label is drawn only if its box is
+// clear of every label already placed. Zooming in frees space, so more names appear.
+function placeLabels(){
+  const boxes = [];
+  const size = map.getSize();
+  dotLayer.eachLayer(m => {
+    const tip = m.getTooltip && m.getTooltip();
+    const node = tip && tip.getElement();
+    if (!node) return;
+    if (!S.labels){ node.style.display = 'none'; return; }
+    const pt = map.latLngToContainerPoint(m.getLatLng());
+    const w = node.offsetWidth || (shortName(m._lo).length * 5.6 + 10);
+    const h = node.offsetHeight || 15;
+    const x = pt.x + m.options.radius + 4, y = pt.y - h/2;
+    const box = [x, y, x + w, y + h];
+    const off = box[2] < 0 || box[0] > size.x || box[3] < 0 || box[1] > size.y;
+    const hit = boxes.some(b => box[0] < b[2] && box[2] > b[0] && box[1] < b[3] && box[3] > b[1]);
+    node.style.display = (off || hit) ? 'none' : '';
+    if (!off && !hit) boxes.push(box);
+  });
+}
+
+// ── timeline: overview ──────────────────────────────────────────
+const ov = document.getElementById('overview');
+const OVM = {l:34, r:12, t:10, b:22};
+let ovW = 0, ovH = 0;
+const ovX = t => OVM.l + (t - T0) / (T1 - T0) * (ovW - OVM.l - OVM.r);
+const ovT = x => T0 + (x - OVM.l) / (ovW - OVM.l - OVM.r) * (T1 - T0);
+
+function drawOverview(){
+  ovW = ov.clientWidth; ovH = ov.clientHeight;
+  ov.textContent = '';
+  // before first layout the SVG can report zero width, which makes every derived width negative
+  if (ovW < OVM.l + OVM.r + 10 || ovH < OVM.t + OVM.b + 10) return;
+  ov.setAttribute('viewBox', `0 0 ${ovW} ${ovH}`);
+  const plotH = ovH - OVM.t - OVM.b;
+
+  const years = {};
+  for (const e of EV){
+    if (!visible(e)) continue;
+    const y = new Date(e.t).getUTCFullYear();
+    (years[y] = years[y] || {});
+    for (const c of e.cat) years[y][c] = (years[y][c]||0) + 1;
+  }
+  const max = Math.max(1, ...Object.values(years).map(o => Object.values(o).reduce((a,b)=>a+b,0)));
+
+  for (const g of [0, .5, 1]){
+    const y = OVM.t + plotH * (1-g);
+    const ln = el('line', {x1:OVM.l, x2:ovW-OVM.r, y1:y, y2:y, class: g?'':'axisline'});
+    ln.setAttribute('stroke', g ? 'var(--grid)' : 'var(--axis)');
+    ln.setAttribute('shape-rendering','crispEdges');
+    ov.append(ln);
+    if (g){
+      const tx = el('text', {x: OVM.l-6, y: y+3.5, 'text-anchor':'end', class:'tk'});
+      tx.setAttribute('font-size','11'); tx.setAttribute('fill','var(--muted)');
+      tx.textContent = Math.round(max*g); ov.append(tx);
+    }
+  }
+
+  const bw = (ovW - OVM.l - OVM.r) / 38;
+  for (const y in years){
+    const x = ovX(Date.UTC(+y,0,1)) + 1;
+    let acc = 0;
+    for (const c of ['lecture','performance','reading','sermon']){
+      const n = years[y][c]; if (!n) continue;
+      const h = n / max * plotH;
+      ov.append(el('rect', {x, y: OVM.t + plotH - acc - h, width: Math.max(1, bw-3),
+        height: Math.max(1, h - (acc?2:0)), fill: COLOR[c], class:'bar', rx:1}));
+      acc += h;
+    }
+  }
+  for (let y = 1855; y <= 1890; y += 5){
+    const x = ovX(Date.UTC(y,0,1));
+    const tx = el('text', {x, y: ovH - 7, 'text-anchor':'middle'});
+    tx.setAttribute('font-size','11'); tx.setAttribute('fill','var(--muted)');
+    tx.setAttribute('font-variant-numeric','tabular-nums');
+    tx.textContent = y; ov.append(tx);
+  }
+  drawBrush();
+}
+
+let brushG = null;
+function drawBrush(){
+  if (brushG) brushG.remove();
+  brushG = el('g');
+  const plotTop = OVM.t, plotH = ovH - OVM.t - OVM.b;
+  brushG.append(el('rect', {x:OVM.l, y:plotTop, width: ovW-OVM.l-OVM.r, height: plotH, class:'brush-hit'}));
+  if (S.range){
+    const a = ovX(S.range[0]), b = ovX(S.range[1]);
+    brushG.append(el('rect', {x:OVM.l, y:plotTop, width: Math.max(0,a-OVM.l), height:plotH, class:'brush-bg'}));
+    brushG.append(el('rect', {x:b, y:plotTop, width: Math.max(0, ovW-OVM.r-b), height:plotH, class:'brush-bg'}));
+    brushG.append(el('rect', {x:a, y:plotTop, width: Math.max(1,b-a), height:plotH, class:'brush-win'}));
+    brushG.append(el('rect', {x:a+1, y:plotTop, width: Math.max(0,b-a-2), height:plotH, class:'brush-move'}));
+    for (const hx of [a, b])
+      brushG.append(el('rect', {x:hx-3, y:plotTop+plotH/2-11, width:6, height:22, class:'brush-handle'}));
+  }
+  ov.append(brushG);
+}
+
+(function brushBehaviour(){
+  let mode = null, anchor = 0, start = null;
+  const localX = ev => {
+    const r = ov.getBoundingClientRect();
+    return (ev.clientX - r.left) * (ovW / r.width);
+  };
+  const track = ev => {
+    const x = localX(ev);
+    if (mode === 'edge'){
+      const t = Math.max(T0, Math.min(T1, ovT(x)));
+      S.range = [Math.min(anchor,t), Math.max(anchor,t)];
+    } else {
+      const dt = ovT(x) - ovT(start.x);
+      let [a,b] = start.range.map(v => v + dt);
+      if (a < T0){ b += T0-a; a = T0; } if (b > T1){ a -= b-T1; b = T1; }
+      S.range = [a,b];
+    }
+    render();
+  };
+  ov.addEventListener('pointerdown', ev => {
+    const x = localX(ev);
+    if (x < OVM.l - 4 || x > ovW - OVM.r + 4) return;
+    const cls = ev.target.getAttribute('class') || '';
+    if (cls === 'brush-handle'){
+      const [a,b] = S.range.map(ovX);
+      mode = 'edge'; anchor = Math.abs(x-a) < Math.abs(x-b) ? S.range[1] : S.range[0];
+    } else if (cls === 'brush-move'){
+      mode = 'move'; start = {x, range: S.range.slice()};
+    } else {
+      mode = 'edge'; anchor = ovT(x); S.range = [anchor, anchor];
+    }
+    ov.setPointerCapture(ev.pointerId); ev.preventDefault();
+  });
+  ov.addEventListener('pointermove', ev => { if (mode) track(ev); });
+  // read the release position too: a fast flick can land with no pointermove in between
+  ov.addEventListener('pointerup', ev => {
+    if (mode) track(ev);
+    if (mode === 'edge' && S.range && S.range[1]-S.range[0] < 86400000*7) S.range = null;
+    mode = null; render();
+  });
+  ov.addEventListener('dblclick', () => { S.range = null; render(); });
+})();
+
+// ── timeline: detail ────────────────────────────────────────────
+const det = document.getElementById('detail');
+const DM = {l:34, r:12, t:14, b:24};
+const ROW_H = 11, DOT_R = 4.2, MAX_ROWS = 18;
+function drawDetail(){
+  const W = det.clientWidth;
+  const sel = selection().slice().sort((a,b) => a.t - b.t);
+  const [a, b] = S.range || [T0, T1];
+  const x = t => DM.l + (t - a) / Math.max(1, b - a) * (W - DM.l - DM.r);
+
+  // pack first, then size the band to the rows actually used — a short selection should not
+  // leave two-thirds of the panel empty
+  const pack = [], gap = DOT_R*2 + 2;
+  for (const e of sel){
+    const cx = x(e.t);
+    let r = pack.findIndex(last => cx - last > gap);
+    if (r === -1){ if (pack.length < MAX_ROWS){ r = pack.length; pack.push(-1e9); } else r = pack.length-1; }
+    pack[r] = cx; e._row = r;
+  }
+  const H = Math.max(96, DM.t + DM.b + 12 + Math.max(1, pack.length) * ROW_H);
+  det.style.height = H + 'px';
+  det.setAttribute('viewBox', `0 0 ${W} ${H}`);
+  det.textContent = '';
+
+  document.getElementById('detail-h').textContent =
+    S.range ? `${fmt(a)} — ${fmt(b)}` : 'All years, 1854–1891';
+
+  if (!sel.length){
+    const t = el('text', {x: W/2, y: H/2, 'text-anchor':'middle', class:'empty'});
+    t.textContent = 'No engagements match the current filters.';
+    det.append(t); return;
+  }
+
+  // axis ticks: adaptive to the span
+  const span = b - a, YR = 31557600000, DAY = 86400000;
+  const ticks = [];
+  if (span > 12*YR)      for (let y=1855; y<=1890; y+=5) ticks.push([Date.UTC(y,0,1), y]);
+  else if (span > 3*YR)  for (let y=1854; y<=1892; y++)  ticks.push([Date.UTC(y,0,1), y]);
+  else if (span > 800*DAY)
+    for (let y=1854; y<=1892; y++) for (let m=0;m<12;m+=3)
+      ticks.push([Date.UTC(y,m,1), (m?MONTHS[m].slice(0,3):y)]);
+  else
+    for (let y=1854; y<=1892; y++) for (let m=0;m<12;m++)
+      ticks.push([Date.UTC(y,m,1), MONTHS[m].slice(0,3) + (m?'':' '+y)]);
+  // a range that never crosses a January would otherwise show no year at all
+  const first = ticks.find(([t]) => t >= a && t <= b);
+  if (first && !String(first[1]).match(/\d{4}/))
+    first[1] = first[1] + ' ' + new Date(first[0]).getUTCFullYear();
+
+  const plotB = H - DM.b;
+  for (const [t, lab] of ticks){
+    if (t < a - 1 || t > b + 1) continue;
+    const px_ = x(t);
+    det.append(el('line', {x1:px_, x2:px_, y1:DM.t, y2:plotB, stroke:'var(--grid)',
+      'shape-rendering':'crispEdges'}));
+    const tx = el('text', {x:px_, y:H-8, 'text-anchor':'middle'});
+    tx.setAttribute('font-size','11'); tx.setAttribute('fill','var(--muted)');
+    tx.setAttribute('font-variant-numeric','tabular-nums');
+    tx.textContent = lab; det.append(tx);
+  }
+  det.append(el('line', {x1:DM.l, x2:W-DM.r, y1:plotB, y2:plotB, class:'axisline',
+    stroke:'var(--axis)'}));
+
+  for (const e of sel){
+    const cy = plotB - 8 - e._row * ROW_H;
+    const cls = 'ev' + (e.c ? '' : ' est') + (e.x ? ' x' : '') + (S.hi === e.n ? ' sel' : '');
+    const c = el('circle', {cx: x(e.t), cy, r: DOT_R, class: cls,
+      fill: e.c ? colorOf(e) : 'none', stroke: colorOf(e)});
+    c.dataset.n = e.n;
+    det.append(c);
+  }
+}
+
+det.addEventListener('pointerover', ev => {
+  const n = ev.target.dataset && ev.target.dataset.n; if (!n) return;
+  const e = EV[+n - 1];
+  showTip(ev, entryTip(e));
+  S.hi = +n; paintSelection();
+});
+det.addEventListener('pointerout', () => { hideTip(); S.hi = null; paintSelection(); });
+det.addEventListener('click', ev => {
+  const n = ev.target.dataset && ev.target.dataset.n; if (!n) return;
+  const row = document.querySelector(`tr[data-n="${n}"]`);
+  if (row) row.scrollIntoView({block:'center', behavior:'smooth'});
+});
+
+function entryTip(e){
+  const type = e.cat.map(c => c[0].toUpperCase()+c.slice(1)).join(' & ');
+  return `<div class="t-hd">${esc(e.ti || '(no title recorded)')}</div>
+    <div class="t-sub">#${e.n} &middot; ${esc(e.raw)}, ${new Date(e.t).getUTCFullYear()} &middot;
+      ${type}${e.inf ? ' (inferred)' : ''}<br>${esc(e.lo)}${e.x ? ' &middot; cancelled' : ''}</div>
+    ${!e.c ? `<div class="t-sub" style="margin-top:3px">Estimated: placed at ${fmt(e.t)}${e.t2!==e.t?`, no later than ${fmt(e.t2)}`:''}</div>` : ''}
+    <div class="t-de">${esc(e.de)}</div>`;
+}
+
+// ── subjects ("What") ───────────────────────────────────────────
+// Counts respect every filter EXCEPT the subject filter itself — otherwise picking Shakespeare
+// would zero every other row and there would be no way back.
+const subjBox = document.getElementById('subjects');
+const YEARS = [];
+for (let y = 1854; y <= 1891; y++) YEARS.push(y);
+
+function subjectTally(){
+  const pool = EV.filter(e => visible(e) && inRange(e) && inPlace(e) && matchesQ(e));
+  const groups = new Map();                 // group -> {n, cats:{}, years:[], works:Map}
+  const blank = () => ({n:0, cats:{}, years:new Array(YEARS.length).fill(0), works:new Map()});
+  for (const e of pool){
+    const yi = new Date(e.t).getUTCFullYear() - 1854;
+    const seen = new Set();
+    for (const [g, w] of e.sub){
+      let G = groups.get(g); if (!G) groups.set(g, G = blank());
+      if (!seen.has(g)){                    // one entry counts once per group
+        seen.add(g); G.n++; G.years[yi]++;
+        for (const c of e.cat) G.cats[c] = (G.cats[c]||0) + 1;
+      }
+      let W = G.works.get(w); if (!W) G.works.set(w, W = blank());
+      W.n++; W.years[yi]++;
+      for (const c of e.cat) W.cats[c] = (W.cats[c]||0) + 1;
+    }
+  }
+  return [...groups.entries()].sort((a,b) => b[1].n - a[1].n || a[0].localeCompare(b[0]));
+}
+
+function bar(d, max, w, h){
+  const svg = el('svg', {width:'100%', height:h, viewBox:`0 0 ${w} ${h}`,
+    preserveAspectRatio:'none', class:'s-bar', 'aria-hidden':'true'});
+  let x = 0;
+  for (const c of ['lecture','performance','reading','sermon']){
+    const n = d.cats[c]; if (!n) continue;
+    const bw = n / max * w;
+    svg.append(el('rect', {x, y:0, width:Math.max(1, bw - (x ? 2 : 0)), height:h,
+      fill:COLOR[c], rx:2}));                     // 2px surface gap between segments
+    x += bw;
+  }
+  return svg;
+}
+
+function spark(d, max){
+  const w = 112, h = 20;
+  const svg = el('svg', {width:w, height:h, viewBox:`0 0 ${w} ${h}`, class:'s-spark',
+    'aria-hidden':'true'});
+  const step = w / YEARS.length;
+  svg.append(el('line', {x1:0, x2:w, y1:h-1, y2:h-1, stroke:'var(--grid)',
+    'shape-rendering':'crispEdges'}));
+  d.years.forEach((n, i) => {
+    if (!n) return;
+    const bh = Math.max(2.5, n / max * (h - 3));
+    svg.append(el('rect', {x:i*step, y:h - 1 - bh, width:Math.max(1.6, step - 0.5), height:bh,
+      fill:'var(--ink-2)', opacity:.8}));
+  });
+  return svg;
+}
+
+function drawSubjects(){
+  const tally = subjectTally();
+  subjBox.textContent = '';
+  if (!tally.length){
+    const p = document.createElement('p');
+    p.className = 'empty-msg';
+    p.textContent = 'No engagements match the current filters.';
+    subjBox.append(p); return;
+  }
+  const maxN = tally[0][1].n;
+  const maxYear = Math.max(1, ...tally.flatMap(([, d]) => d.years));
+
+  const head = document.createElement('div');
+  head.className = 's-head';
+  head.innerHTML = '<span></span><span>Author or corpus</span><span>Engagements by type</span>'
+    + '<span class="s-spark-h">1854 – 1891</span><span class="s-n">n</span>';
+  subjBox.append(head);
+
+  const row = (name, d, k, isWork, expandable) => {
+    const b = document.createElement('button');
+    b.className = 'srow' + (isWork ? ' work' : '');
+    b.type = 'button';
+    b.dataset.k = k;
+    b.setAttribute('aria-pressed', String(S.subjects.has(k)));
+    b.title = `${name} — ${d.n} engagement${d.n===1?'':'s'}`;
+
+    const tw = document.createElement('span');
+    tw.className = 's-tw' + (S.open.has(name) ? ' open' : '');
+    tw.textContent = expandable ? '▸' : '';
+    const nm = document.createElement('span');
+    nm.className = 's-name'; nm.textContent = name;
+    const barCell = document.createElement('span');
+    barCell.append(bar(d, maxN, 300, 13));
+    const sparkCell = document.createElement('span');
+    sparkCell.className = 's-cell-spark';
+    sparkCell.append(spark(d, maxYear));
+    const num = document.createElement('span');
+    num.className = 's-n'; num.textContent = d.n;
+
+    b.append(tw, nm, barCell, sparkCell, num);
+    subjBox.append(b);
+  };
+
+  for (const [g, d] of tally){
+    const works = [...d.works.entries()].sort((a,b) => b[1].n - a[1].n || a[0].localeCompare(b[0]));
+    const expandable = works.length > 1 || works[0][0] !== '(unknown)';
+    row(g, d, g, false, expandable);
+    if (S.open.has(g)) for (const [w, wd] of works) row(w, wd, key(g, w), true, false);
+  }
+}
+
+subjBox.addEventListener('click', ev => {
+  const b = ev.target.closest('.srow'); if (!b) return;
+  const k = b.dataset.k;
+  // a click on the twisty opens the group; a click anywhere else toggles the filter
+  if (!k.includes(SEP) && ev.target.closest('.s-tw')){
+    S.open.has(k) ? S.open.delete(k) : S.open.add(k);
+  } else {
+    S.subjects.has(k) ? S.subjects.delete(k) : S.subjects.add(k);
+    if (!k.includes(SEP) && S.subjects.has(k)) S.open.add(k);
+  }
+  render();
+});
+
+function drawSubjectChips(){
+  const box = document.getElementById('subject-chips');
+  box.textContent = '';
+  box.hidden = !S.subjects.size;
+  if (!S.subjects.size) return;
+  const label = document.createElement('span');
+  label.className = 'flabel'; label.textContent = 'Subject';
+  box.append(label);
+  for (const k of S.subjects){
+    const b = document.createElement('button');
+    b.className = 'chip'; b.type = 'button'; b.dataset.k = k;
+    b.innerHTML = `${esc(k.split(SEP).join(' · '))} <span class="x">&times;</span>`;
+    b.setAttribute('aria-label', 'Remove subject filter ' + k.split(SEP).join(' '));
+    box.append(b);
+  }
+  const clear = document.createElement('button');
+  clear.className = 'link'; clear.id = 'clear-subjects'; clear.textContent = 'Clear subjects';
+  box.append(clear);
+}
+document.getElementById('subject-chips').addEventListener('click', ev => {
+  if (ev.target.closest('#clear-subjects')){ S.subjects.clear(); render(); return; }
+  const b = ev.target.closest('[data-k]'); if (!b) return;
+  S.subjects.delete(b.dataset.k); render();
+});
+
+// ── search ──────────────────────────────────────────────────────
+const qInput = document.getElementById('q');
+let qTimer;
+qInput.addEventListener('input', () => {
+  clearTimeout(qTimer);
+  qTimer = setTimeout(() => { S.q = qInput.value.trim().toLowerCase(); render(); }, 140);
+});
+
+// ── table view ──────────────────────────────────────────────────
+function drawTable(){
+  const sel = selection();
+  const tb = document.getElementById('tbody');
+  const scope = [S.place, S.subjects.size ? [...S.subjects].map(k => k.split(SEP).join(' · ')).join(', ') : '',
+                 S.q ? `“${S.q}”` : ''].filter(Boolean).join(' · ');
+  document.getElementById('listcount').textContent =
+    `${sel.length} of ${EV.length} entries` + (scope ? ` · ${scope}` : '');
+  const frag = document.createDocumentFragment();
+  for (const e of sel){
+    const tr = document.createElement('tr');
+    tr.dataset.n = e.n;
+    if (S.hi === e.n) tr.className = 'sel';
+    const type = e.cat.map(c => c[0].toUpperCase()+c.slice(1)).join(' & ');
+    tr.innerHTML =
+      `<td class="n">${e.n}</td>` +
+      `<td class="d">${esc(e.raw)}${e.c ? '' : '<span class="flag">est</span>'}</td>` +
+      `<td><span class="badge"><span class="sw" style="background:${colorOf(e)}"></span>${type}</span>` +
+        `${e.inf ? '<span class="flag">inferred</span>' : ''}${e.x ? '<span class="flag">cancelled</span>' : ''}</td>` +
+      `<td>${esc(e.ti || '—')}</td>` +
+      `<td>${esc(e.lo)}</td>` +
+      `<td class="de">${esc(e.de)}</td>`;
+    frag.append(tr);
+  }
+  tb.textContent = ''; tb.append(frag);
+}
+document.getElementById('tbody').addEventListener('click', ev => {
+  const tr = ev.target.closest('tr'); if (!tr) return;
+  const e = EV[+tr.dataset.n - 1];
+  S.place = (S.place === e.lo) ? null : e.lo;
+  render();
+});
+document.getElementById('tbody').addEventListener('pointerover', ev => {
+  const tr = ev.target.closest('tr'); if (!tr) return;
+  showTip(ev, entryTip(EV[+tr.dataset.n - 1]));
+});
+document.getElementById('tbody').addEventListener('pointerout', hideTip);
+
+function paintSelection(){
+  det.querySelectorAll('circle.ev').forEach(c =>
+    c.classList.toggle('sel', +c.dataset.n === S.hi));
+  document.querySelectorAll('#tbody tr').forEach(tr =>
+    tr.classList.toggle('sel', +tr.dataset.n === S.hi));
+}
+
+// ── tooltip ─────────────────────────────────────────────────────
+const tip = document.getElementById('tip');
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c =>
+  ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function showTip(ev, html){
+  tip.innerHTML = html; tip.style.opacity = 1;
+  const r = tip.getBoundingClientRect();
+  let x = ev.clientX + 14, y = ev.clientY + 14;
+  if (x + r.width > innerWidth - 8)  x = ev.clientX - r.width - 14;
+  if (y + r.height > innerHeight - 8) y = Math.max(8, ev.clientY - r.height - 14);
+  tip.style.left = x + 'px'; tip.style.top = y + 'px';
+}
+function hideTip(){ tip.style.opacity = 0; }
+
+// ── controls ────────────────────────────────────────────────────
+const catBox = document.getElementById('cats');
+for (const c of CATS){
+  const b = document.createElement('button');
+  b.className = 'chip'; b.dataset.cat = c.id; b.setAttribute('aria-pressed','true');
+  b.innerHTML = `<span class="sw" style="background:${c.color}"></span>${c.label} <span class="ct"></span>`;
+  catBox.append(b);
+}
+catBox.addEventListener('click', ev => {
+  const b = ev.target.closest('[data-cat]'); if (!b) return;
+  const id = b.dataset.cat;
+  S.cats.has(id) ? S.cats.delete(id) : S.cats.add(id);
+  if (!S.cats.size) CATS.forEach(c => S.cats.add(c.id));
+  render();
+});
+document.querySelectorAll('[data-tog]').forEach(b => b.addEventListener('click', () => {
+  const k = b.dataset.tog; S[k] = !S[k]; render();
+}));
+document.querySelectorAll('[data-fit]').forEach(b =>
+  b.addEventListener('click', () => fit(b.dataset.fit)));
+document.getElementById('reset').addEventListener('click', () => {
+  CATS.forEach(c => S.cats.add(c.id));
+  Object.assign(S, {est:true, canc:true, routes:false, labels:true, range:null, place:null,
+                    q:'', hi:null});
+  S.subjects.clear(); S.open.clear();
+  qInput.value = '';
+  fit('all'); render();
+});
+
+const themeBtn = document.getElementById('theme');
+const isDark = () => document.documentElement.getAttribute('data-theme') === 'dark'
+  || (!document.documentElement.hasAttribute('data-theme')
+      && matchMedia('(prefers-color-scheme: dark)').matches);
+function syncTheme(){
+  const dark = isDark();
+  themeBtn.setAttribute('aria-pressed', String(dark));
+  document.getElementById('theme-t').textContent = dark ? 'Dark' : 'Light';
+}
+themeBtn.addEventListener('click', () => {
+  document.documentElement.setAttribute('data-theme', isDark() ? 'light' : 'dark');
+  syncTheme(); drawOverview(); drawDetail();
+});
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change', syncTheme);
+
+// ── render ──────────────────────────────────────────────────────
+function render(){
+  // counted against every filter EXCEPT the type filter itself, so a chip never changes its
+  // own number and each one reads as "how many you would get by picking this"
+  const counts = {};
+  for (const e of EV){
+    if ((S.est || e.c) && (S.canc || !e.x) && inRange(e) && inPlace(e) && inSubject(e) && matchesQ(e))
+      for (const c of e.cat) counts[c] = (counts[c]||0)+1;
+  }
+  document.querySelectorAll('[data-cat]').forEach(b => {
+    b.setAttribute('aria-pressed', String(S.cats.has(b.dataset.cat)));
+    b.querySelector('.ct').textContent = counts[b.dataset.cat] || 0;
+  });
+  document.querySelectorAll('[data-tog]').forEach(b =>
+    b.setAttribute('aria-pressed', String(!!S[b.dataset.tog])));
+  document.getElementById('ct-est').textContent  = EV.filter(e => !e.c).length;
+  document.getElementById('ct-canc').textContent = EV.filter(e =>  e.x).length;
+  drawSubjectChips();
+  drawMap(); drawOverview(); drawDetail(); drawSubjects(); drawTable();
+}
+
+syncTheme();
+fit('all');
+render();
+
+// The map is sized in vh/%, so its pixel box only settles after layout — and can change again on
+// any resize. Re-fit whenever it does, unless the reader has panned or zoomed themselves.
+let relayout;
+new ResizeObserver(() => {
+  clearTimeout(relayout);
+  relayout = setTimeout(() => {
+    map.invalidateSize({animate: false});
+    if (!userMoved) fit(lastFit); else placeLabels();
+    drawOverview(); drawDetail();
+  }, 60);
+}).observe(document.getElementById('map'));
+</script>
